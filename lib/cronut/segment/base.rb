@@ -12,6 +12,10 @@ module Cronut
         @possibilities = parser.possibilities
       end
 
+      def to_s
+        possibilities.join(' ')
+      end
+
       private
 
       def minimum
