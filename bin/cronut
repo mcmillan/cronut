@@ -2,4 +2,16 @@
 
 require 'cronut'
 
-puts Cronut::Expression.new(ARGV[0])
+expression = ARGV[0]
+
+unless expression
+  puts 'Usage: cronut <expression>'
+  exit 1
+end
+
+begin
+  puts Cronut::Expression.new(expression)
+rescue ArgumentError => e
+  puts "Unable to parse '#{expression}': #{e.message}"
+  exit 1
+end
