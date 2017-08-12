@@ -14,3 +14,5 @@ require 'cronut/segment/hour'
 require 'cronut/segment/day'
 require 'cronut/segment/month'
 require 'cronut/segment/weekday'
+
+require 'cronut/expression'
