@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby
 
-require "cronut"
+require 'cronut'
+
+puts Cronut::Expression.new(ARGV[0])
