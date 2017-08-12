@@ -17,7 +17,7 @@ Gem::Specification.new do |spec|
   end
 
   spec.bindir        = 'bin'
-  spec.executables   = ['bin/cronut']
+  spec.executables   = ['cronut']
   spec.require_paths = ['lib']
 
   spec.add_development_dependency 'bundler', '~> 1.14'
