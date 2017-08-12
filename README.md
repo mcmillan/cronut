@@ -1,5 +1,7 @@
 # Cronut
 
+[![Build Status](https://travis-ci.org/mcmillan/cronut.svg?branch=master)](https://travis-ci.org/mcmillan/cronut) [![Gem Version](https://badge.fury.io/rb/cronut.svg)](https://badge.fury.io/rb/cronut)
+
 <img align="right" width="150" src="https://upload.wikimedia.org/wikipedia/commons/9/99/Cronut.jpg">
 
 Cronut is a tool for taking a cron expression (e.g. `* * * * * /bin/yes`) and outputting the times at which that cron expression will run. It supports most standard Vixie cron syntax, with some exceptions – see [known issues](#known-issues).
