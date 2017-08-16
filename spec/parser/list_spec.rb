@@ -16,10 +16,28 @@ describe Cronut::Parser::List do
   end
 
   describe '#possibilities' do
-    subject { described_class.new(segment: '1,2,3', minimum: 1, maximum: 5) }
+    context 'with an array of plain integers' do
+      subject { described_class.new(segment: '1,2,3', minimum: 1, maximum: 5) }
 
-    it 'returns an array of the supplied integers' do
-      expect(subject.possibilities).to eq([1, 2, 3])
+      it 'returns an array of the supplied integers' do
+        expect(subject.possibilities).to eq([1, 2, 3])
+      end
+    end
+
+    context 'with an array of other segment types' do
+      subject { described_class.new(segment: '1-2,2,*/2', minimum: 1, maximum: 5) }
+
+      it 'returns all possibilites for the given segments' do
+        expect(subject.possibilities).to eq([1, 2, 3, 5])
+      end
+    end
+
+    context 'with an array of other segment types in non-ascending order' do
+      subject { described_class.new(segment: '5,1,2-3', minimum: 1, maximum: 5) }
+
+      it 'returns all possibilities for the given segments ordered' do
+        expect(subject.possibilities).to eq([1, 2, 3, 5])
+      end
     end
   end
 end

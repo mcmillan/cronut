@@ -4,9 +4,13 @@ module Cronut
       private
 
       def generate_possibilities
-        segment.split(',').map do |n|
-          safely_convert_to_integer(n)
+        segments = segment.split(',')
+
+        ranges = segments.map do |segment|
+          Cronut::Parser.for(segment: segment, maximum: maximum, minimum: minimum)
         end
+
+        ranges.flat_map(&:possibilities).uniq.sort
       end
     end
   end
