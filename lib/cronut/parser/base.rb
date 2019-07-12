@@ -21,14 +21,15 @@ module Cronut
       def validate_possibilities!
         @possibilities.each do |possibility|
           next if (minimum..maximum).cover?(possibility)
+
           raise ArgumentError, 'Possibilities exceed permitted range'
         end
       end
 
-      def safely_convert_to_integer(n)
-        Integer(n)
+      def safely_convert_to_integer(number)
+        Integer(number)
       rescue ArgumentError
-        raise ArgumentError, "Non-numeric value supplied: #{n}"
+        raise ArgumentError, "Non-numeric value supplied: #{number}"
       end
     end
   end

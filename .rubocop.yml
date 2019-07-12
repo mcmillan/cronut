@@ -1,0 +1,20 @@
+# default is 80 chars and our screens are bigger than that
+Metrics/LineLength:
+  Max: 120
+
+# metrics that don't take into account a human on the other end
+Metrics/BlockLength:
+  Enabled: false
+Metrics/AbcSize:
+  Enabled: false
+Metrics/MethodLength:
+  Enabled: false
+
+# linter-enforced documentation is not good documentation
+Style/Documentation:
+  Enabled: false
+
+# permit escaped slashes inside regular expressions
+Style/RegexpLiteral:
+  EnforcedStyle: mixed
+  AllowInnerSlashes: true

@@ -8,14 +8,14 @@ module Cronut
     end
 
     def to_s
-      <<~EOF
+      <<~HUMANIZED
         minute        #{minute}
         hour          #{hour}
         day of month  #{day}
         month         #{month}
         day of week   #{weekday}
         command       #{command}
-      EOF
+      HUMANIZED
     end
 
     private
