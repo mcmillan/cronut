@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'cronut/version'
 
 require 'cronut/parser'

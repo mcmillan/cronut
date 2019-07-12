@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Cronut
   module Parser
     class Step < Base

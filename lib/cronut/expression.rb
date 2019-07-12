@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Cronut
   class Expression
     attr_reader :expression, :minute, :hour, :day, :month, :weekday, :command
