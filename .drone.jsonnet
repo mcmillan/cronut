@@ -7,7 +7,7 @@ local Pipeline(version) = {
       image: "ruby:" + version,
       commands: [
         "gem install bundler",
-        "bundle install",
+        "bundle install --jobs 4",
         "bundle exec rake rubocop",
         "bundle exec rake spec"
       ]
