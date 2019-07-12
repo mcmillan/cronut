@@ -1,0 +1,47 @@
+---
+kind: pipeline
+name: ruby-2-6
+steps:
+  - name: test
+    image: ruby:2.6
+    commands:
+      - gem install bundler
+      - bundle install
+      - bundle exec rake rubocop
+      - bundle exec rake spec
+
+---
+kind: pipeline
+name: ruby-2-5
+steps:
+  - name: test
+    image: ruby:2.5
+    commands:
+      - gem install bundler
+      - bundle install
+      - bundle exec rake rubocop
+      - bundle exec rake spec
+
+---
+kind: pipeline
+name: ruby-2-4
+steps:
+  - name: test
+    image: ruby:2.4
+    commands:
+      - gem install bundler
+      - bundle install
+      - bundle exec rake rubocop
+      - bundle exec rake spec
+
+---
+kind: pipeline
+name: ruby-2-3
+steps:
+  - name: test
+    image: ruby:2.3
+    commands:
+      - gem install bundler
+      - bundle install
+      - bundle exec rake rubocop
+      - bundle exec rake spec
