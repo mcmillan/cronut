@@ -72,6 +72,14 @@ To work on Cronut:
 1. Run `bundle install`
 1. Run the tests using `rake`
 
+## CI
+
+Tests are run on [Drone](https://drone.io/) against recent versions of Ruby.
+
+The configuration file – `.drone.yml` – is automatically generated via [Jsonnet](https://jsonnet.org/).
+
+**Do not edit it directly**; make your changes to `.drone.jsonnet` and then run `rake generate_drone_yml`.
+
 ## License
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
